@@ -1,9 +1,8 @@
 #!/bin/sh
 echo "NS2 installation script created by Adithya Manjunath"
 sleep 5
-sudo apt-get install -f wget -y
 sudo apt-get install -f nam -y
-wget https://github.com/weirdadithya/installns2/blob/main/ns-src-2.35.tar.gz
+tar -xzvf ns-allinone-2.35.tar.gz
 cd ns-allinone-2.35
 sudo apt-get install build-essential autoconf automake libxmu-dev
 sudo apt-get install -f build-essential libxt-dev libxt6 libsm-dev libsm6 
