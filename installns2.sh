@@ -6,13 +6,9 @@ sudo apt-get install -f ns2 -y
 dpkg-query -s ns2 > /dev/null 2>&1
 case $? in
 0)
-    echo $1 has been installed successfully!
-    ;;
+    echo "ns2 has been installed successfully!";;
 1)
-    echo $1 has not been installed :(
-    ;;
+    echo "ns2 has not been installed :(";;
 2)
-    echo An error occurred
-    ;;
+    echo "An error occurred";;
 esac
-
