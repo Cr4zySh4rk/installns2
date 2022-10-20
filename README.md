@@ -1,5 +1,5 @@
-#Installation Instructions
-##Run the following in the terminal
+# Installation Instructions
+## Run the following in the terminal
 Step 1: sudo apt-get install git -y
 
 Step 2: git clone https://github.com/weirdadithya/installns2.git
