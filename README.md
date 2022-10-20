@@ -1,11 +1,15 @@
-Step 1: Download the file called installns2.sh
+#Installation Instructions
+##Run the following in the terminal
+Step 1: sudo apt-get install git -y
 
-Step 2: cd into the directory where you downloaded the file
+Step 2: git clone https://github.com/weirdadithya/installns2.git
 
-Step 2: use chmod +x installns2.sh to make the script executable
+Step 3: cd installns2
 
-Step 3: use sudo ./installns2.sh to run the script
+Step 4: chmod +x installns2.sh
+
+Step 5: sudo ./installns2.sh
 
 That's it!
 
-Hopefully you have now got ns2 installed!
+Hopefully you now have NS2 installed!
