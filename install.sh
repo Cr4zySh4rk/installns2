@@ -11,8 +11,8 @@ sudo apt update
 sudo apt-get install gcc-4.8 g++-4.8 -y
 cd installns2
 tar -xvzf ns-allinone-2.35.tar.gz
-sudo cp ns-allinone-2.35 ~/ns-allinone-2.35
-sudo cp install ~/ns-allinone-2.35/install
+sudo cp -r ns-allinone-2.35 ~/ns-allinone-2.35
+sudo cp -r install ~/ns-allinone-2.35/install
 cd
 cd ns-allinone-2.35
 cd ns-2.35
