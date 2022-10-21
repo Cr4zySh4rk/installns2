@@ -13,7 +13,7 @@ sudo apt update
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 sudo apt update
 sudo gpg -a --export 3B4FE6ACC0B21F32 | sudo apt-key add -
-sudo apt-key export C0B21F32 | sudo gpg --dearmour -o /usr/share/keyrings/pgdg.gpg
+sudo apt-key export C0B21F32 | sudo gpg --dearmour -o /usr/share/keyrings/pgdg.gpg -y
 sudo apt update
 sudo apt-get install gcc-4.8 g++-4.8 -y
 tar -xvzf ns-allinone-2.35.tar.gz
