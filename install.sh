@@ -12,29 +12,15 @@ sudo apt-get install gcc-4.8 g++-4.8 -y
 tar -xvzf ns-allinone-2.35.tar.gz
 sudo cp -r ns-allinone-2.35 ~/ns-allinone-2.35
 sudo cp -r install ~/ns-allinone-2.35/install
-cd
-cd ns-allinone-2.35
-cd ns-2.35
-sed -i '36s/.*/CC	= gcc-4.8/' Makefile.in
-sed -i '37s/.*/CPP       = g++-4.8/' Makefile.in
-cd ..
-cd otcl-1.14
-sed -i '7s/.*/CC	= gcc-4.8/' Makefile.in
-cd ..
-cd nam-1.15
-sed -i '46s/.*/CC	= gcc-4.8/' Makefile.in
-sed -i '47s/.*/CPP       = g++-4.8/' Makefile.in
-cd ..
-cd xgraph-12.2
-sed -i '120s/.*/CC = gcc-4.8/' Makefile.in
-sed -i '123s/.*/CPP = g++-4.8/' Makefile.in
-cd ..
-cd ns-2.35
-cd linkstate
-sed -i '137s/.*/	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }/' ls.h
-cd
-cd ns-allinone-2.35
-./install
+sed -i '36s/.*/CC	= gcc-4.8/' ~/ns-allinone-2.35/ns-2.35/Makefile.in
+sed -i '37s/.*/CPP       = g++-4.8/' ~/ns-allinone-2.35/ns-2.35/Makefile.in
+sed -i '7s/.*/CC	= gcc-4.8/' ~/ns-allinone-2.35/otcl-1.14/Makefile.in
+sed -i '46s/.*/CC	= gcc-4.8/' ~/ns-allinone-2.35/nam-1.15/Makefile.in
+sed -i '47s/.*/CPP       = g++-4.8/' ~/ns-allinone-2.35/nam-1.15/Makefile.in
+sed -i '120s/.*/CC = gcc-4.8/' ~/ns-allinone-2.35/xgraph-12.2/Makefile.in
+sed -i '123s/.*/CPP = g++-4.8/' ~/ns-allinone-2.35/xgraph-12.2/Makefile.in
+sed -i '137s/.*/	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }/' ~/ns-allinone-2.35/ns-2.35/linkstate/ls.h
+sudo ~/ns-allinone-2.35/install
 sed -i '4s/.*/export PATH=$PATH:~/ns-allinone-2.35/bin:~/ns-allinone-2.35/tcl8.5.10/unix:~/ns-allinone-2.35/tk8.5.10/unix/' ~/.bashrc
 sed -i '7s/.*/export LD_LIBRARY_PATH=~/ns-allinone-2.35/otcl-1.14:~/ns-allinone-2.35/lib/' ~/.bashrc
 echo "Test installation by typing in nam, if you get a console window, then everything installed properly!"
