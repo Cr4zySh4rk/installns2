@@ -1,4 +1,5 @@
 echo "NS2 installation script by Adithya Manjunath"
+sleep 5
 sudo apt remove --purge nam ns2 -y
 sudo apt install build-essential autoconf automake libxmu-dev -y
 echo "deb [arch=amd64,i386] http://us.archive.ubuntu.com/ubuntu/ bionic main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list > /dev/null
