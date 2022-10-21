@@ -9,7 +9,6 @@ sudo gpg -a --export 3B4FE6ACC0B21F32 | sudo apt-key add -
 sudo apt-key export C0B21F32 | sudo gpg --dearmour -o /usr/share/keyrings/pgdg.gpg
 sudo apt update
 sudo apt-get install gcc-4.8 g++-4.8 -y
-cd installns2
 tar -xvzf ns-allinone-2.35.tar.gz
 sudo cp -r ns-allinone-2.35 ~/ns-allinone-2.35
 sudo cp -r install ~/ns-allinone-2.35/install
