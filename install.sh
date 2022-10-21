@@ -12,9 +12,9 @@ sudo apt-get install gcc-4.8 g++-4.8 -y
 cd installns2
 tar -xvzf ns-allinone-2.35.tar.gz
 sudo cp ns-allinone-2.35 ~/ns-allinone-2.35
+sudo cp install ~/ns-allinone-2.35/install
 cd
 cd ns-allinone-2.35
-sudo cp install ~/ns-allinone-2.35/install
 cd ns-2.35
 sed -i '36s/.*/CC	= gcc-4.8/' Makefile.in
 sed -i '37s/.*/CPP       = g++-4.8/' Makefile.in
@@ -33,6 +33,8 @@ cd ..
 cd ns-2.35
 cd linkstate
 sed -i '137s/.*/	void eraseAll() { this->erase(baseMap::begin(), baseMap::end()); }/' ls.h
+cd
+cd ns-allinone-2.35
 ./install
 sed -i '4s/.*/export PATH=$PATH:~/ns-allinone-2.35/bin:~/ns-allinone-2.35/tcl8.5.10/unix:~/ns-allinone-2.35/tk8.5.10/unix/' ~/.bashrc
 sed -i '7s/.*/export LD_LIBRARY_PATH=~/ns-allinone-2.35/otcl-1.14:~/ns-allinone-2.35/lib/' ~/.bashrc
