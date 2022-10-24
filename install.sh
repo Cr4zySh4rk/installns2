@@ -17,6 +17,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 sudo apt update
 sudo apt-get install gcc-4.8 g++-4.8 -y
 tar -xzvf ns-allinone-2.35.tar.gz -C ~/
+sudo apt-get upgrade -y
 echo "Patching installation files"
 sleep 1
 sed -i '46s|@CC@|gcc-4.8|g' ~/ns-allinone-2.35/nam-1.15/Makefile.in
