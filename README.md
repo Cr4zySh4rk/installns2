@@ -8,7 +8,7 @@ Step 3: cd installns2
 
 Step 4: chmod +x install.sh
 
-Step 5: sudo ./install.sh
+Step 5: ./install.sh
 
 That's it!
 
