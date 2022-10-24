@@ -14,4 +14,4 @@ Step 6: source ~/.bashrc
 
 That's it!
 
-Hopefully you now have NS2 installed!
+Hopefully you now have NS2 and NAM installed!
