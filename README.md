@@ -10,6 +10,8 @@ Step 4: chmod +x install.sh
 
 Step 5: ./install.sh
 
+Step 6: source ~/.bashrc
+
 That's it!
 
 Hopefully you now have NS2 installed!
