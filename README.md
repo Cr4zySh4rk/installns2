@@ -21,3 +21,5 @@ Hopefully you now have NS2 and NAM installed!
 Step 7: cd ~/ns-allinone-2.35
 
 Step 8: ./install
+
+Step 9: source ~/.bashrc
