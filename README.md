@@ -15,3 +15,9 @@ Step 6: source ~/.bashrc
 That's it!
 
 Hopefully you now have NS2 and NAM installed!
+
+If you have any TCL/TKL error follow the below additional steps:
+
+Step 7: cd ~/ns-allinone-2.35
+
+Step 8: ./install
