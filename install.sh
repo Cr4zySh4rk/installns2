@@ -46,12 +46,11 @@ fi
 cd ~/ns-allinone-2.35
 bash install
 sudo cp ~/.bashrc ~/.bashrc.old
-NS=$(cd;pwd)
 echo "Adding path to .bashrc"
 sleep 1
 sudo sed -i '4s|.*|export PATH=$PATH:|g' ~/.bashrc
-sudo sed -i "4s|:|:$NS/ns-allinone-2.35/bin:$NS/ns-allinone-2.35/tcl8.5.10/unix:$NS/ns-allinone-2.35/tk8.5.10/unix|g" ~/.bashrc
-sudo sed -i "10s|.*|export LD_LIBRARY_PATH=$NS/ns-allinone-2.35/otcl-1.14:$NS/ns-allinone-2.35/lib|g" ~/.bashrc
-sudo sed -i "14s|.*|export TCL_LIBRARY=$NS/ns-allinone-2.35/tcl8.5.10/library|g" ~/.bashrc
+sudo sed -i "4s|:|:$HOME/ns-allinone-2.35/bin:$HOME/ns-allinone-2.35/tcl8.5.10/unix:$HOME/ns-allinone-2.35/tk8.5.10/unix|g" ~/.bashrc
+sudo sed -i "10s|.*|export LD_LIBRARY_PATH=$HOME/ns-allinone-2.35/otcl-1.14:$HOME/ns-allinone-2.35/lib|g" ~/.bashrc
+sudo sed -i "14s|.*|export TCL_LIBRARY=$HOME/ns-allinone-2.35/tcl8.5.10/library|g" ~/.bashrc
 echo "Run source ~/.bashrc"
 echo "Test installation by typing in nam, if you get a console window, then everything installed properly!"
