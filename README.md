@@ -23,3 +23,11 @@ Step 7: cd ~/ns-allinone-2.35
 Step 8: ./install
 
 Step 9: source ~/.bashrc
+
+### If XGraph has not been installed properly follow the below additional steps
+
+Step 10: chmod +x xgraph.sh
+
+Step 11: ./xgraph.sh
+
+Step 12: source ~/.bashrc

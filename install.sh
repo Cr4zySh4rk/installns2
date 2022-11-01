@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "NS2 installation script by Adithya Manjunath"
 sleep 3
 echo "Installing gcc-4.8 and g++-4.8"
@@ -48,9 +49,12 @@ bash install
 sudo cp ~/.bashrc ~/.bashrc.old
 echo "Adding path to .bashrc"
 sleep 1
-sudo sed -i '4s|.*|export PATH=$PATH:|g' ~/.bashrc
-sudo sed -i "4s|:|:$HOME/ns-allinone-2.35/bin:$HOME/ns-allinone-2.35/tcl8.5.10/unix:$HOME/ns-allinone-2.35/tk8.5.10/unix|g" ~/.bashrc
-sudo sed -i "10s|.*|export LD_LIBRARY_PATH=$HOME/ns-allinone-2.35/otcl-1.14:$HOME/ns-allinone-2.35/lib|g" ~/.bashrc
-sudo sed -i "14s|.*|export TCL_LIBRARY=$HOME/ns-allinone-2.35/tcl8.5.10/library|g" ~/.bashrc
+echo "" | sudo tee -a ~/.bashrc > /dev/null
+echo "#NS2 installation related aliases and functions" | sudo tee -a ~/.bashrc > /dev/null
+echo "export PATH=\$PATH:$HOME/ns-allinone-2.35/bin:$HOME/ns-allinone-2.35/tcl8.5.10/unix:$HOME/ns-allinone-2.35/tk8.5.10/unix" | sudo tee -a ~/.bashrc > /dev/null
+echo "export LD_LIBRARY_PATH=$HOME/ns-allinone-2.35/otcl-1.14:$HOME/ns-allinone-2.35/lib" | sudo tee -a ~/.bashrc > /dev/null
+echo "export TCL_LIBRARY=$HOME/ns-allinone-2.35/tcl8.5.10/library" | sudo tee -a ~/.bashrc > /dev/null
 echo "Run source ~/.bashrc"
-echo "Test installation by typing in nam, if you get a console window, then everything installed properly!"
+echo "Test installation by typing in \"nam\", if you get a console window, then nam installed properly!"
+echo "Check if xgraph has been installed properly by typing \"which xgraph\" without the quotes"
+echo "If it returns a path then you are all good, if not then run \"./xgraph.sh\""
