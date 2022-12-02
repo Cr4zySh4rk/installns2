@@ -39,10 +39,10 @@ bash install
 ARCH=$(dpkg-architecture -q DEB_BUILD_ARCH)
 if [ "$ARCH"="arm64" ]; then
   sed -i 's|./configure|./configure --build=aarch64-unknown-linux-gnu|g' ~/ns-allinone-2.35/install
-elif [ "$ARCH"="amd64" ]; then
-  sed -i 's|./configure|./configure --build=x86_64-unknown-linux-gnu|g' ~/ns-allinone-2.35/install
-else
+elif [ "$ARCH"="i386" ]; then
   sed -i 's|./configure|./configure --build=i386-unknown-linux-gnu|g' ~/ns-allinone-2.35/install
+else
+  sed -i 's|./configure|./configure --build=x86_64-unknown-linux-gnu|g' ~/ns-allinone-2.35/install
 fi
 cd ~/ns-allinone-2.35
 bash install
